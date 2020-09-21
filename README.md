@@ -1,6 +1,6 @@
 # pastenull
-(extremely) minimal pastebin service written in go. Runs in a docker container and outputs gopher:// and http:// links
-Accepts multi-part form data with `curl -F` from file or stdin.
+(extremely) minimal pastebin service written in go. Runs in a docker container and outputs gopher:// and http:// links.  
+Accepts multi-part form data with `curl -F` from file or stdin.  
 
 ## server usage (docker)
 1. Build the image
@@ -29,13 +29,17 @@ Note: Right now i have my test domain hardcoded in main.go. If you run it locall
 ## client usage (upload)
 1. upload file
 ```
-curl -F'file=@file' wfnintr.net:1337
+$ curl -F'file=@file.txt' wfnintr.net:1337
+http://wfnintr.net/paste/v9J9cyH99E.txt
+gopher://wfnintr.net/0/paste/v9J9cyH99E.txt
+
 
 ```
 
 2. upload data from stdin
 ```
-curl -F'file=@-' wfnintr.net:1337 < file
-
+$ curl -F'file=@-' wfnintr.net:1337 < file
+http://wfnintr.net/paste/ZkdHbHyH9=
+gopher://wfnintr.net/0/paste/ZkdHbHyH9=
 ```
 
