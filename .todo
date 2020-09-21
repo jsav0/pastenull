@@ -1,6 +1,0 @@
-
-
-- Fix file extensions
-- is VOLUME /SRV necessary in the Dockerfile?
-- is mkdir paste really doing anything? 
-- 
